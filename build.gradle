@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation("org.immutables:value:2.9.0")
+    implementation("org.immutables:mongo:2.9.0")
+    implementation("org.immutables:criteria-mongo:2.9.0")
+
+    annotationProcessor("org.immutables:value:2.9.0")
+    annotationProcessor("org.immutables:mongo:2.9.0")
+    annotationProcessor("org.immutables:criteria-common:2.9.0")
+    annotationProcessor("org.immutables:criteria-mongo:2.9.0")
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
